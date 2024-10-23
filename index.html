@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertanyaan Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function cekJawaban() {
+            var jawaban = document.getElementById("jawaban").value.toLowerCase();
+            if (jawaban === "merahputih") {
+                alert("benar,dan 1 hal lagi senyumlah syukuri hidupmu tetaplah semangat dan teruslah berserah kepada-Nya 🎵🎵!");
+            } else {
+                alert("Jawaban kamu salah, coba lagi.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Pertanyaan:</h1>
+        <p>Warna bendera Indonesia (no spasi&kapital)?</p>
+        <input type="text" id="jawaban" placeholder="Masukkan jawaban di sini">
+        <button onclick="cekJawaban()">Submit</button>
+    </div>
+</body>
+</html>
